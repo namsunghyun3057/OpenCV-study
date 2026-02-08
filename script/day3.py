@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import os
 
 # 7. 이미지 자르기
 
@@ -176,7 +177,9 @@ cv2.destroyAllWindows()
 """
 ## 회전된 이미지 세우기
 """"""
-img = cv2.imread("poker.jpg")
+base_dir = os.path.dirname(os.path.abspath(__file__))
+path = os.path.join(base_dir, "../asset/poker.jpg")
+img = cv2.imread(path)
 
 width, height = 530, 710
 
